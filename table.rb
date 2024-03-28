@@ -4,7 +4,12 @@ class Table
   end
 
   def to_s
-    data2 = @data.map { |ar| ar.join('  ') }
-    data_formatted = data2.join("\n   ")
+    rows.join("\n   ")
+  end
+
+  private
+
+  def rows
+    @data.map { |value| value.join('  ') }
   end
 end
